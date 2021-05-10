@@ -1,5 +1,5 @@
 install:
 	yarn install
 
-tests:
+ci:
 	yarn test:coverage
