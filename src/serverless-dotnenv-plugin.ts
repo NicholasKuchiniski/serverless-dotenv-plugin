@@ -51,7 +51,7 @@ export class ServerlessDotenvPlugin {
     for (const entry of Object.entries(this.definitions)) {
       const [key, value] = entry;
 
-      outputStream.write(Buffer.from(`${key}=${value}`));
+      outputStream.write(Buffer.from(`${key}=${value}\n`));
 
       this.serverless.cli.log(`✅ ${key}`);
     }

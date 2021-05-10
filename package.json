@@ -1,6 +1,6 @@
 {
   "name": "@nicholaskuchiniski/serverless-dotenv-plugin",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Serverless plugin template",
   "main": "src/index.js",
   "repository": {

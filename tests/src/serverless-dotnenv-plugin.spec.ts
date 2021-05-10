@@ -55,7 +55,7 @@ describe("ServerlessDotenvPlugin", () => {
       plugin.write();
 
       // then
-      expect(write.calledWith(Buffer.from(`API_URL=${definitions.API_URL}`))).to.be.true;
+      expect(write.calledWith(Buffer.from(`API_URL=${definitions.API_URL}\n`))).to.be.true;
     });
   });
 
