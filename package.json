@@ -1,6 +1,6 @@
 {
   "name": "@nicholaskuchiniski/serverless-dotenv-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Serverless plugin template",
   "main": "src/index.js",
   "files": [
@@ -19,7 +19,7 @@
     "aws lambda"
   ],
   "scripts": {
-    "compile": "rm -rf dist && tsc && tsc-alias && rm -rf dist/tests && cp ./package.json ./dist/package.json",
+    "compile": "rm -rf dist && tsc && tsc-alias && rm -rf dist/tests && cp ./package.json ./dist/package.json && cp ./README.md ./dist/README.md",
     "lint": "eslint ./src ./test --ext ts",
     "lint:fix": "eslint ./src ./test --ext ts --fix",
     "lint:staged": "lint-staged",
