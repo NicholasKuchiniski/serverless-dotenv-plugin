@@ -1,7 +1,7 @@
 service: my-example-app
 
 plugins:
- - "@vizir/serverless-dotenv-plugin"
+ - "@nicholaskuchiniski/serverless-dotenv-plugin"
 
 custom: 
   dotenv: 

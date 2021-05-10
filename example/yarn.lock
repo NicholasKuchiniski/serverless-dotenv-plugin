@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@vizir/serverless-dotenv-plugin@file:../dist":
+"@nicholaskuchiniski/serverless-dotenv-plugin@file:../dist":
   version "1.0.0"
   dependencies:
     "@types/chai" "^4.2.18"

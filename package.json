@@ -1,5 +1,5 @@
 {
-  "name": "@vizir/serverless-dotenv-plugin",
+  "name": "@nicholaskuchiniski/serverless-dotenv-plugin",
   "version": "1.0.0",
   "description": "Serverless plugin template",
   "main": "src/index.js",

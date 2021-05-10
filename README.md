@@ -1,4 +1,4 @@
-# @vizir/serverless-dotenv-plugin
+# @nicholaskuchiniski/serverless-dotenv-plugin
 Create .env files on your serverless function using serverless.yaml definition
 
 ## Why ?
@@ -6,11 +6,11 @@ The main objective of this library is to get out of the [lambda limit 4KBs probl
 
 ## Usage
 
-- Install the plugin with `yarn add -D @vizir/serverless-dotenv-plugin`
+- Install the plugin with `yarn add -D @nicholaskuchiniski/serverless-dotenv-plugin`
 - Add the plugin on you serverless.yaml:
   ```yaml
   plugins:
-  - "@vizir/serverless-dotenv-plugin"
+  - "@nicholaskuchiniski/serverless-dotenv-plugin"
   ```
 - Create a custom definition on your serverless.yaml:
   ```yaml
