@@ -1,13 +1,8 @@
 {
   "name": "@nicholaskuchiniski/serverless-dotenv-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Serverless plugin template",
   "main": "src/index.js",
-  "files": [
-    "dist",
-    "package.json",
-    "README.md"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NicholasKuchiniski/serverless-dotenv-plugin.git"
