@@ -1,0 +1,23 @@
+service: my-example-app
+
+plugins:
+ - "@vizir/serverless-dotenv-plugin"
+
+custom: 
+  dotenv: 
+    API_URL: http://api-url.example.com
+
+provider:
+ name: aws
+ runtime: nodejs14.x
+ memorySize: 128
+ timeout: 10
+ stage: production
+ region: us-east-1
+
+functions:
+ api:
+   handler: index.http
+   events:
+     - http: ANY {proxy+}
+     - http: ANY /

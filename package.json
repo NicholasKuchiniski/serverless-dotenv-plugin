@@ -1,0 +1,66 @@
+{
+  "name": "@vizir/serverless-dotenv-plugin",
+  "version": "1.0.0",
+  "description": "Serverless plugin template",
+  "main": "src/index.js",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicholasKuchiniski/serverless-dotenv-plugin.git"
+  },
+  "keywords": [
+    "serverless",
+    "serverless plugin",
+    "typescript",
+    "aws lambda"
+  ],
+  "scripts": {
+    "compile": "rm -rf dist && tsc && tsc-alias && rm -rf dist/tests && cp ./package.json ./dist/package.json",
+    "lint": "eslint ./src ./test --ext ts",
+    "lint:fix": "eslint ./src ./test --ext ts --fix",
+    "lint:staged": "lint-staged",
+    "check-ts": "tsc --noEmit",
+    "test": "LOG_LEVEL=test NODE_ENV=test mocha tests/**/*.spec.ts --recursive --exit --colors",
+    "test:coverage": "LOG_LEVEL=test NODE_ENV=test nyc yarn test"
+  },
+  "devDependencies": {
+    "@types/faker": "^5.5.4",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^15.0.2",
+    "@types/sinon": "^10.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "chai": "^4.3.4",
+    "eslint": "^7.3.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "faker": "^5.5.3",
+    "husky": "^5.1.1",
+    "lint-staged": "^10.5.4",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "sinon": "^10.0.0",
+    "ts-node": "^9.0.0",
+    "tsc": "^2.0.3",
+    "tsc-alias": "^1.2.7",
+    "typescript": "^3.9.5"
+  },
+  "peerDependencies": {
+    "serverless": "2.x"
+  },
+  "engines": {
+    "node": ">=10.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@types/chai": "^4.2.18"
+  }
+}

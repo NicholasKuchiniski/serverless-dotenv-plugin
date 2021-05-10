@@ -1,0 +1,10 @@
+{
+  "diff": true,
+  "extension": "spec.ts",
+  "exit": true,
+  "colors": true,
+  "timeout": 5000,
+  "full-trace": true,
+  "recursive": true,
+  "require": ["ts-node/register", "tsconfig-paths/register"]
+}

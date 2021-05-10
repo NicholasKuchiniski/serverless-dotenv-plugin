@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "resolveJsonModule": true,
+    "lib": ["es2017", "DOM"],
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2017",
+    "outDir": "dist",
+    "types": ["node", "mocha"],
+    "baseUrl": "./",
+    "paths": {
+      "#/*": ["src/*"],
+      "!/*": ["test/*"]
+    },
+  },
+  "exclude": ["node_modules", "example"]
+}

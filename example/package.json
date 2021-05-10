@@ -1,0 +1,18 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "write-envs": "serverless dotenv write",
+    "deploy": "serverless deploy"
+  },
+  "dependencies": {
+    "aws-serverless-express": "^3.4.0",
+    "dotenv": "^9.0.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@vizir/serverless-dotenv-plugin": "file:../dist"
+  }
+}
