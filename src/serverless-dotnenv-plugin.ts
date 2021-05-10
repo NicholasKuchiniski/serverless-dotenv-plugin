@@ -16,22 +16,15 @@ export class ServerlessDotenvPlugin {
   public constructor(public readonly serverless: Serverless, public readonly options: ServerlessOptions) {
     this.commands = {
       dotenv: {
-        commands: {
-          write: {
-            usage: "Write your custom definitions on a .env file",
-            lifecycleEvents: ["prepare", "write", "teardown"],
-          },
-        },
+        usage: "Write your custom definitions on a .env file",
+        lifecycleEvents: ["prepare", "write", "teardown"],
       },
     };
 
     this.hooks = {
-      "before:deploy:deploy": async (): Promise<void> => {
-        return this.serverless.pluginManager.run(["dotenv", "write"]);
-      },
-      "dotenv:write:prepare": this.prepare.bind(this),
-      "dotenv:write:write": this.write.bind(this),
-      "dotenv:write:teardown": this.teardown.bind(this),
+      "dotenv:prepare": this.prepare.bind(this),
+      "dotenv:write": this.write.bind(this),
+      "dotenv:teardown": this.teardown.bind(this),
     };
   }
 

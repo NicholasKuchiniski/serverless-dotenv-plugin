@@ -23,7 +23,7 @@ The main objective of this library is to get out of the [lambda limit 4KBs probl
     dotenv: 
       API_URL: http://api-url.example.com
   ```
-- Run `serverless deploy`, a .env file will be created on the root your actual directory and serverless will put it inside your lambda (is important to have dotenv propertly configured inside your code)
+- Run `serverless dotenv`, a .env file will be created on the root your actual directory and serverless will put it inside your lambda (is important to have dotenv propertly configured inside your code)
 
 ## Example
 Inside the main repository, a /example exists with a simple serverless function that shows a value from the .env file.

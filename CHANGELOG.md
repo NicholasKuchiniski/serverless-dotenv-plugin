@@ -15,6 +15,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -
 
+## [2.0.0] - 2021-04-10
+
+### Changed
+
+- *Breaking change* change api to `serverless dotenv`
+
 ## [1.0.4] - 2021-04-10
 
 ### Changed
