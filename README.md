@@ -11,10 +11,12 @@ The main objective of this library is to get out of the [lambda limit 4KBs probl
 
 - Install the plugin with `yarn add -D @nicholaskuchiniski/serverless-dotenv-plugin`
 - Add the plugin on you serverless.yaml:
+
   ```yaml
   plugins:
   - "@nicholaskuchiniski/serverless-dotenv-plugin"
   ```
+
 - Create a custom definition on your serverless.yaml:
   ```yaml
   custom: 
