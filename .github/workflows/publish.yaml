@@ -1,0 +1,33 @@
+name: Publish artifacts on release
+
+on:
+  release:
+    types: [published]
+
+env:
+    NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: full
+      
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: make install
+      - run: make ci
+      - run: make compile
+      - run: make publish
+        env:
+          CI: true
