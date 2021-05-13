@@ -14,7 +14,7 @@ The main objective of this library is to get out of the [lambda limit 4KBs probl
 
   ```yaml
   plugins:
-  - "@nicholaskuchiniski/serverless-dotenv-plugin"
+    - "@nicholaskuchiniski/serverless-dotenv-plugin"
   ```
 
 - Create a custom definition on your serverless.yaml:
