@@ -7,7 +7,7 @@ export interface Serverless {
   };
   service: {
     custom: {
-      dotenv: Record<string, string>;
+      dotenv: Record<string, string | undefined>;
     };
   };
   pluginManager: PluginManager;

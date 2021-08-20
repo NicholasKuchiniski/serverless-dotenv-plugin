@@ -7,7 +7,7 @@ console.log(ServerlessDotenvPlugin);
 export class ServerlessDotenvPluginSubject {
   public log: SinonSpy = spy();
 
-  private definitions!: Record<string, string>;
+  private definitions!: Record<string, string | undefined>;
 
   public createPlugin(): ServerlessDotenvPlugin {
     return new ServerlessDotenvPlugin(
@@ -34,7 +34,7 @@ export class ServerlessDotenvPluginSubject {
     return this;
   }
 
-  public withDefinitions(definitions: Record<string, string>): ServerlessDotenvPluginSubject {
+  public withDefinitions(definitions: Record<string, string | undefined>): ServerlessDotenvPluginSubject {
     this.definitions = definitions;
 
     return this;

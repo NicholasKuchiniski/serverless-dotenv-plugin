@@ -6,6 +6,7 @@ plugins:
 custom: 
   dotenv: 
     API_URL: http://api-url.example.com
+    OTHER_API_VALUE:
 
 provider:
  name: aws

@@ -57,6 +57,28 @@ describe("ServerlessDotenvPlugin", () => {
       // then
       expect(write.calledWith(Buffer.from(`API_URL=${definitions.API_URL}\n`))).to.be.true;
     });
+
+    it("should write definitions on .env file as empty when value is undefined", () => {
+      // given
+      const definitions = {
+        API_URL: undefined,
+      };
+      const subject = new ServerlessDotenvPluginSubject().withDefinitions(definitions);
+      const plugin = subject.createPlugin();
+
+      const write = spy();
+
+      createWriteStream.returns({
+        write,
+      });
+
+      // when
+      plugin.prepare();
+      plugin.write();
+
+      // then
+      expect(write.calledWith(Buffer.from(`API_URL=\n`))).to.be.true;
+    });
   });
 
   describe(".teardown", () => {

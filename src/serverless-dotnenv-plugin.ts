@@ -10,7 +10,7 @@ export class ServerlessDotenvPlugin {
 
   public path: string = join(".env");
 
-  public definitions!: Record<string, string>;
+  public definitions!: Record<string, string | undefined>;
 
   /* istanbul ignore next */
   public constructor(public readonly serverless: Serverless, public readonly options: ServerlessOptions) {
@@ -44,7 +44,7 @@ export class ServerlessDotenvPlugin {
     for (const entry of Object.entries(this.definitions)) {
       const [key, value] = entry;
 
-      outputStream.write(Buffer.from(`${key}=${value}\n`));
+      outputStream.write(Buffer.from(`${key}=${value ?? ""}\n`));
 
       this.serverless.cli.log(`✅ ${key}`);
     }
